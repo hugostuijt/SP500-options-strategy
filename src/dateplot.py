@@ -18,7 +18,7 @@ def plotGraph(data, labels, ylabel=None, title=None, saveLoc=None):
     ax.xaxis.set_minor_locator(years)
     ax.xaxis.set_major_locator(mdates.YearLocator(5))
 
-    plt.legend(loc=9, bbox_to_anchor=(0.5, -0.2), labels=labels)
+    plt.legend(loc=9, bbox_to_anchor=(0.5, -0.3), labels=labels)
     plt.xlabel('Date')
     plt.ylabel(ylabel)
     plt.grid()
