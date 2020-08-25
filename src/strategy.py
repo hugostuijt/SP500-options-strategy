@@ -35,7 +35,6 @@ def simulateStrategy(data, tradingDates, spx, spxRet, putAllocation, minMaturity
 
     # loop over each trading date, skip first
     for i in range(1, len(tradingDates)):
-        # for date in tradingDates[1:]:
         date = tradingDates[i]
         ret = spxRet[date]
 
@@ -102,7 +101,7 @@ def simulateStrategy(data, tradingDates, spx, spxRet, putAllocation, minMaturity
             # update current options (new position + average price)
             currentOption = bestOption[['maturity', 'strike']]
             # take the weighted average offer price (only for calculating the return after selling the whole position)
-            currentOption['offer'] = prevPosition * prevPrice / position - extra * bestOption['offer'] / position
+            currentOption['offer'] = prevPosition * prevPrice / position + extra * bestOption['offer'] / position
             currentOption['position'] = position
 
     portfolioValue['temp'] = portfolioValue['puts'] / (portfolioValue['S&P500'] + portfolioValue['puts'])
