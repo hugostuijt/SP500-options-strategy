@@ -7,6 +7,6 @@ The portfolio is rebalanced each 3rd Friday of the month, as then new S&P500 opt
 
 As an example of the portfolio performance, the following graphs demonstrate the performance of a portfolio where 2.5% of its value is invested in ~90% OTM put options with a minimum maturity of 150 trading days. 
 
-<img src="images/cumret.png" width="350"><img src="images/mwSharpe.png" width="350">
+<img src="cumret.png" width="350"><img src="mwSharpe.png" width="350">
 
 Performance is bad; although the portfolio variance is lower than the S&P500 (0.13 vs 0.17), the annualized Sharpe ratio (over the whole sample period) is 0.08 compared to 0.32 for the S&P500. Even looking at a 3-year moving window Sharpe ratio, the constructed portfolio never outperforms the S&P500. A higher moving window Sharpe ratio in periods of market distress would have been expected, however (even with smaller window sizes) this is not found. 
